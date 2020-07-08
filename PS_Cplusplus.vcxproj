@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{9910BA52-D7BB-4AC0-B484-E5C841D49DEC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Algorithm\2019\2019snu\c.cpp" />
+    <ClCompile Include="Algorithm\2019\2019snu\D.cpp" />
+    <ClCompile Include="Algorithm\2019\2019snu\e.cpp" />
+    <ClCompile Include="Algorithm\2020\mon_06\alg10874.cpp" />
+    <ClCompile Include="Algorithm\2020\mon_06\alg10875.cpp" />
+    <ClCompile Include="Algorithm\2020\mon_06\alg10881.cpp" />
+    <ClCompile Include="Algorithm\2020\mon_06\alg10882.cpp" />
+    <ClCompile Include="Algorithm\2020\mon_06\retry\alg10881.cpp" />
+    <ClCompile Include="Algorithm\2020\weekly_vitaalgo\0301_01.cpp" />
+    <ClCompile Include="algorithm\codeforces\577div2\A.cpp" />
+    <ClCompile Include="algorithm\codeforces\577div2\B.cpp" />
+    <ClCompile Include="algorithm\codeforces\577div2\C.cpp" />
+    <ClCompile Include="algorithm\codeforces\577div2\D.cpp" />
+    <ClCompile Include="algorithm\codeforces\579div3\A.cpp" />
+    <ClCompile Include="algorithm\codeforces\579div3\B.cpp" />
+    <ClCompile Include="algorithm\codeforces\579div3\C.cpp" />
+    <ClCompile Include="algorithm\codeforces\579div3\D1.cpp" />
+    <ClCompile Include="algorithm\codeforces\579div3\D2.cpp" />
+    <ClCompile Include="algorithm\codeforces\579div3\E.cpp" />
+    <ClCompile Include="algorithm\codeforces\579div3\F.cpp" />
+    <ClCompile Include="algorithm\codeforces\581div2\A.cpp" />
+    <ClCompile Include="algorithm\codeforces\581div2\B.cpp" />
+    <ClCompile Include="algorithm\codeforces\581div2\C.cpp" />
+    <ClCompile Include="algorithm\codeforces\581div2\D.cpp" />
+    <ClCompile Include="algorithm\codeforces\582div3\A.cpp" />
+    <ClCompile Include="algorithm\codeforces\582div3\B.cpp" />
+    <ClCompile Include="algorithm\codeforces\582div3\C.cpp" />
+    <ClCompile Include="algorithm\codeforces\582div3\D.cpp" />
+    <ClCompile Include="algorithm\codeforces\582div3\G.cpp" />
+    <ClCompile Include="algorithm\codeforces\583div12\D.cpp" />
+    <ClCompile Include="algorithm\codeforces\edu71\C.cpp" />
+    <ClCompile Include="algorithm\codeforces\edu71\D.cpp" />
+    <ClCompile Include="algorithm\codeforces\edu71\E.cpp" />
+    <ClCompile Include="algorithm\codeforces\edu71\G.cpp" />
+    <ClCompile Include="algorithm\codeforces\test.cpp" />
+    <ClCompile Include="algorithm\kakaotest.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1002.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1012.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1018.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg10866.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg11000.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg11047.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg11286.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg11758.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1197.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1238.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg12755.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg12756.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg12757.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg12758.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg12759.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg12760.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg12761.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg12762.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg12763.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg12764.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg12781.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg13904.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1431.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1449.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg14624.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg14625.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg14626.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1493.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg16681.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1700.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1715.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1748.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1753.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1764.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1766.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1927.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1931.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg1969.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg2014.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg2075.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg2104.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg2166.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg2212.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg2252.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg2467.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg2529.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg2623.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg2908.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg2957.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg3085.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg3665.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg4796.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg5430.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg6129.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg7785.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\Alg9470.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\retry\Alg12763.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\retry\Alg12763_2.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\retry\Alg1516.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\retry\Alg1766.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\retry\Alg2529.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_06\scafolding\Alg11000.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg10026.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1021.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1023.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg10265.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1036.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1039.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg10597.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg10610.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg10844.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1102.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg11053.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg11403.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg11441.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg11659.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg11660.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg11723.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg11729.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg11969.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1256.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg12865.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1300.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1327.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1339.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1405.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1406.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1463.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg14728.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1525.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1562.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg15732.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg16397.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg16434.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg16500.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1654.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1699.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg17136.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1725.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1743.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1904.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1918.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1935.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1939.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg1966.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2001.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2110.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2133.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2164.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2213.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2248.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2291.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2294.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2304.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2339.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2343.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2346.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2494.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2512.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2533.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2580.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2661.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2753.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2805.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2840.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg2841.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg3041.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg3078.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg3986.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg5014.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg5076.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg5397.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg5427.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg6236.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg7562.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg9465.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg9466.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\Alg9663.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\codeforces\573A.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\codeforces\573B.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\codeforces\573C.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\codeforces\573D.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\codeforces\575Div3\A.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\codeforces\575Div3\D.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\retry\Alg1339.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\retry\Alg1966.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\retry\Alg1966_2.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\retry\Alg1987.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\retry\Alg2001.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\retry\Alg2291.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_07\test.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1016.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg10211.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1068.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg10775.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg10986.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg11505.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg11725.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg11997.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg12015.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1269.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg12837.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1351.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1365.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1456.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1484.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg16139.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1620.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg16437.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1644.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg16507.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg16562.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg16713.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1717.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg17203.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg17398.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1806.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1949.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1967.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1976.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1991.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg1992.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg2003.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg2014.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg2038.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg2042.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg2096.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg2250.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg2268.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg2287.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg2293.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg2696.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg2884.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg2904.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg2960.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg3006.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg3482.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg3745.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg3780.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg3896.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg4195.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg4256.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg4803.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg6588.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg9421.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\Alg9938.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\retry\Alg1016.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\retry\Alg11997.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_08\retry\Alg2038.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_09\Alg15422.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_09\Alg1916.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_09\Alg1938.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_10\hw1.c" />
+    <ClCompile Include="Algorithm\2019\Mon_11\Alg1890.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_11\Alg2042.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_11\hw2.c" />
+    <ClCompile Include="Algorithm\2019\Mon_11\test.cpp" />
+    <ClCompile Include="Algorithm\2019\Mon_12\hw3.c" />
+    <ClCompile Include="Algorithm\2019\scpc\1.cpp" />
+    <ClCompile Include="Algorithm\2019\scpc\2.cpp" />
+    <ClCompile Include="Algorithm\2019\scpc\2\1.cpp" />
+    <ClCompile Include="Algorithm\2019\scpc\2\2.cpp" />
+    <ClCompile Include="Algorithm\2019\scpc\2\3.cpp" />
+    <ClCompile Include="Algorithm\2019\scpc\2\4.cpp" />
+    <ClCompile Include="Algorithm\2019\scpc\2\5.cpp" />
+    <ClCompile Include="Algorithm\2019\scpc\3.cpp" />
+    <ClCompile Include="Algorithm\2019\scpc\3_1.cpp" />
+    <ClCompile Include="Algorithm\2019\scpc\4.cpp" />
+    <ClCompile Include="Algorithm\2019\scpc\5.cpp" />
+    <ClCompile Include="cppcont\src\ch02\main.cpp" />
+    <ClCompile Include="cppcont\src\ch02\p02_3.cpp" />
+    <ClCompile Include="cppcont\src\ch02\p02_4.cpp" />
+    <ClCompile Include="cppcont\src\ch02\p02_4_2.cpp" />
+    <ClCompile Include="cppcont\src\ch03\p03_1.cpp" />
+    <ClCompile Include="cppcont\src\ch03\p03_2.cpp" />
+    <ClCompile Include="cppcont\src\ch03\p03_2_2.cpp" />
+    <ClCompile Include="cppcont\src\ch04\p04_1.cpp" />
+    <ClCompile Include="cppcont\src\ch04\p04_2.cpp" />
+    <ClCompile Include="cppcont\src\ch04\p04_3.cpp" />
+    <ClCompile Include="cppcont\src\ch05\p05_1.cpp" />
+    <ClCompile Include="cppcont\src\ch07\p07_1.cpp" />
+    <ClCompile Include="cppcont\src\ch07\p07_2.cpp" />
+    <ClCompile Include="cppcont\src\ch07\p07_3.cpp" />
+    <ClCompile Include="cppcont\src\ch07\p07_4.cpp" />
+    <ClCompile Include="cppcont\src\ch08\p08_1.cpp" />
+    <ClCompile Include="cppcont\src\ch10\p10_1.cpp" />
+    <ClCompile Include="cppcont\src\ch10\p10_1_1.cpp" />
+    <ClCompile Include="cppcont\src\ch10\p10_1_2.cpp" />
+    <ClCompile Include="cppcont\src\ch10\p10_2.cpp" />
+    <ClCompile Include="cppcont\src\ch11\p11_1.cpp" />
+    <ClCompile Include="cppcont\src\ch11\p11_2.cpp" />
+    <ClCompile Include="cppcont\src\ch11\p11_2_1.cpp" />
+    <ClCompile Include="cppcont\src\ch11\p11_2_2.cpp" />
+    <ClCompile Include="cppcont\src\ch12\String.cpp" />
+    <ClCompile Include="cppcont\src\ch13\p13_1.cpp" />
+    <ClCompile Include="cppcont\src\ch13\p13_1_1.cpp" />
+    <ClCompile Include="cppcont\src\ch13\p13_2.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\BetweenAdder.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\DefaultValue1.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\DefaultValue2.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\DefaultValue3.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\FunctionOverloading.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\HelloWorld.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\InlineFunc.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\NameAlias.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\NameSp1.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\NameSp2.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\NameSp3.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\oop 단계별 프로젝트 01단계\BankingSystemVer01.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\SimpleAdder.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\StringIO.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\UsingDcl1.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\UsingDcl2.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 1 source\UsingDcl3.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 10 source\CommuMultipleOperation.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 10 source\ConsoleOutput.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 10 source\FirstOperationOverloading.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 10 source\GFunctionOverloading.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 10 source\IterateConsoleOutput.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 10 source\OneOpndOverloading.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 10 source\OverloadingOperation.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 10 source\PointConsoleOutput.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 10 source\PointMultipleOperation.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 10 source\PostOpndOverloading.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\ArrayClass.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\ArrayNewDeleteOverloading.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\AssignOperation.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\AssignShallowCopyError.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\ConvToObject.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\ConvToPrimitive.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\FirstOperationOverloading.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\Functor.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\ImproveInit.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\InheritAssignOperation.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\NewDeleteOverloading.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\oop 단계별 프로젝트 08단계\Account.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\oop 단계별 프로젝트 08단계\AccountArray.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\oop 단계별 프로젝트 08단계\AccountHandler.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\oop 단계별 프로젝트 08단계\BankingSystemMain.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\PointerOperatorOverloading.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\SmartPointer.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\SortFunctor.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\StableArrayClass.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\StableAssignOperation.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\StableConstArrayProb.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\StableConstArraySolu.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\StablePointObjArray.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 11 source\StablePointPtrArray.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 12 soruce\oop 단계별 프로젝트 09단계\Account.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 12 soruce\oop 단계별 프로젝트 09단계\AccountArray.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 12 soruce\oop 단계별 프로젝트 09단계\AccountHandler.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 12 soruce\oop 단계별 프로젝트 09단계\BankingSystemMain.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 12 soruce\oop 단계별 프로젝트 09단계\String.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 12 soruce\STDString.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 12 soruce\StringClass.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\AddFunctionTemplate.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\NeedSpecialFunctionTemplate.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\oop 단계별 프로젝트 10단계\Account.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\oop 단계별 프로젝트 10단계\AccountHandler.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\oop 단계별 프로젝트 10단계\BankingSystemMain.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\oop 단계별 프로젝트 10단계\String.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\PointClassTemplate.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\PointClassTemplateFuncDef.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\PrimitiveFunctionTemplate.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\SpecialFunctionTemplate.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\template array\BoundArrayMain.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\template array\Point.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\template header\PointMain.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\template header\PointTemplate.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 13 source\TwoTypeAddFunction.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 14 source\ClassTemplatePartialSpecialization.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 14 source\ClassTemplateSpecialization.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 14 source\ClassTemplateStaticMem.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 14 source\FunctionTemplateStaticVar.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 14 source\NonTypeTemplateParam.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 14 source\PointTemplateFriendFunction.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 14 source\template array\BoundArrayMain.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 14 source\TemplateParamDefaultValue.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\ATMSim.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\ATMSim2.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\BadAlloc.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\CatchFlow.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\CatchList.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\catch_over2.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\DiffHandlingPosition.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\HandlingExceptionTryCatch.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\HandlingExceptionUseIf.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\inheri_catch1.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\inheri_catch2.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\OOhandling.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\OOhandlingflow.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\oop 단계별 프로젝트 11단계\Account.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\oop 단계별 프로젝트 11단계\AccountHandler.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\oop 단계별 프로젝트 11단계\BankingSystemMain.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\oop 단계별 프로젝트 11단계\String.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\PassException.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\ReThrow.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\StackUnwinding.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\unhandle_exp1.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\unhandle_exp2.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 15 source\UnhandlingException.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 16 source\ConstCasting.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 16 source\DynamicBadCastRef.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 16 source\DynamicCasting.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 16 source\DynamicPolymorphicCasting.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 16 source\PolymorphicDynamicCasting.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 16 source\PolymorphicStableCasting.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 16 source\PowerfullCasting.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 16 source\ReinterpretCasting.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 16 source\StaticCasting.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 2 source\DataTypeBool.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 2 source\MemMalFree.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 2 source\NewDelete.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 2 source\NewObject.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 2 source\RefArrElem.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 2 source\Referen.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 2 source\RefPtr.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 2 source\RefReturnOne.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 2 source\RefReturnThree.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 2 source\RefReturnTwo.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 2 source\RefSwap.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 2 source\StdCPPFunc.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 2 source\TrueAndFalse.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 3 source\FruitSaleSim1.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 3 source\inline파일분할\CarInline.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 3 source\inline파일분할\RacingInlineMain.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 3 source\RacingCar.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 3 source\RacingCarClassBase.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 3 source\RacingCarEnum.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 3 source\RacingCarFuncAdd.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 3 source\RacingCarOuterFunc.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 3 source\파일분할\Car.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 3 source\파일분할\RacingMain.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\Constructor1.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\Constructor2.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\Destructor.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\Encaps1.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\Encaps2.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\FruitSaleSim2.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\FruitSaleSim3.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\ObjArr.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\ObjPtrArr.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\oop 단계별 프로젝트 02단계\BankingSystemVer02.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\PointerThis.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\PrivateConstructor.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\RectangleFault.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\rectanglefaultfindconstadded\Point.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\rectanglefaultfindconstadded\Rectangle.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\rectanglefaultfindconstadded\RectangleConstructor.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\rectanglefaultfind\Point.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\rectanglefaultfind\Rectangle.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\rectanglefaultfind\RectangleFaultFind.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\ReferenceMember.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\SelfRef.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 4 source\UsefulThisPtr.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 5 source\ClassInit.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 5 source\DeepCopyCon.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 5 source\IKnowTempObj.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 5 source\oop 단계별 프로젝트 03단계\BankingSystemVer03.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 5 source\PassObjCopycon.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 5 source\ReturnObjCopycon.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 5 source\ReturnObjDeadTime.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 5 source\ShallowCopyError.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 6 source\CComStatic.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 6 source\ConstObject.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 6 source\ConstOverloading.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 6 source\ConstStaticMember.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 6 source\Mutable.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 6 source\MyFriendClass.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 6 source\MyFriendFunction.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 6 source\NeedGlobal.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 6 source\oop 단계별 프로젝트 04단계\BankingSystemVer04.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 6 source\PublicStaticMember.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 6 source\StaticMember.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 7 soruce\DerivCreOrder.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 7 soruce\DerivDestOrder.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 7 soruce\DestModel.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 7 soruce\EmployeeManager1.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 7 soruce\HASComposite.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 7 soruce\HASInheritance.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 7 soruce\ISAInheritance.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 7 soruce\oop 단계별 프로젝트 05단계\BankingSystemVer05.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 7 soruce\ProtectedHeri.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 7 soruce\UnivStudentInheri.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 8 source\EmployeeManager2.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 8 source\EmployeeManager3.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 8 source\EmployeeManager4.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 8 source\EmployeeManager5.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 8 source\FunctionOverride.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 8 source\FunctionVirtualOverride.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 8 source\ObjectPointer.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 8 source\oop 단계별 프로젝트 06단계\BankingSystemVer06.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 8 source\ReferenceAttribute.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 8 source\VirtualDestructor.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 9 source\MultiInheri1.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 9 source\MultiInheri2.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 9 source\MultiInheri3.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 9 source\oop 단계별 프로젝트 07단계\Account.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 9 source\oop 단계별 프로젝트 07단계\AccountHandler.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 9 source\oop 단계별 프로젝트 07단계\BankingSystemMain.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 9 source\RealObjUnder1.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 9 source\RealObjUnder2.cpp" />
+    <ClCompile Include="cppcont\src\cpp_src\chapter 9 source\VirtualInternal.cpp" />
+    <ClCompile Include="cppcont\src\main.cpp" />
+    <ClCompile Include="cppcont\src\namesp2\main.cpp" />
+    <ClCompile Include="cppcont\src\namesp2\twofunc.cpp" />
+    <ClCompile Include="cppcont\src\Test.cpp" />
+    <ClCompile Include="cppcont\src\Test2.cpp" />
+    <ClCompile Include="cppcont\src\Test3.cpp" />
+    <ClCompile Include="cppcont\src\Test4.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cppcont\src\cpp_src\chapter 11 source\oop 단계별 프로젝트 08단계\Account.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 11 source\oop 단계별 프로젝트 08단계\AccountArray.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 11 source\oop 단계별 프로젝트 08단계\AccountHandler.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 11 source\oop 단계별 프로젝트 08단계\BankingCommonDecl.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 11 source\oop 단계별 프로젝트 08단계\HighCreditAccount.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 11 source\oop 단계별 프로젝트 08단계\NormalAccount.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 12 soruce\oop 단계별 프로젝트 09단계\Account.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 12 soruce\oop 단계별 프로젝트 09단계\AccountArray.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 12 soruce\oop 단계별 프로젝트 09단계\AccountHandler.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 12 soruce\oop 단계별 프로젝트 09단계\BankingCommonDecl.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 12 soruce\oop 단계별 프로젝트 09단계\HighCreditAccount.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 12 soruce\oop 단계별 프로젝트 09단계\NormalAccount.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 12 soruce\oop 단계별 프로젝트 09단계\String.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 13 source\oop 단계별 프로젝트 10단계\Account.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 13 source\oop 단계별 프로젝트 10단계\AccountHandler.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 13 source\oop 단계별 프로젝트 10단계\BankingCommonDecl.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 13 source\oop 단계별 프로젝트 10단계\BoundCheckArray.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 13 source\oop 단계별 프로젝트 10단계\HighCreditAccount.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 13 source\oop 단계별 프로젝트 10단계\NormalAccount.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 13 source\oop 단계별 프로젝트 10단계\String.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 13 source\template array\ArrayTemplate.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 13 source\template array\Point.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 13 source\template header\PointTemplate.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 14 source\template array\ArrayTemplate.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 14 source\template array\PointTemplate.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 15 source\oop 단계별 프로젝트 11단계\Account.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 15 source\oop 단계별 프로젝트 11단계\AccountException.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 15 source\oop 단계별 프로젝트 11단계\AccountHandler.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 15 source\oop 단계별 프로젝트 11단계\BankingCommonDecl.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 15 source\oop 단계별 프로젝트 11단계\BoundCheckArray.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 15 source\oop 단계별 프로젝트 11단계\HighCreditAccount.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 15 source\oop 단계별 프로젝트 11단계\NormalAccount.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 15 source\oop 단계별 프로젝트 11단계\String.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 3 source\inline파일분할\CarInline.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 3 source\파일분할\Car.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 4 source\rectanglefaultfindconstadded\Point.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 4 source\rectanglefaultfindconstadded\Rectangle.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 4 source\rectanglefaultfind\Point.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 4 source\rectanglefaultfind\Rectangle.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 9 source\oop 단계별 프로젝트 07단계\Account.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 9 source\oop 단계별 프로젝트 07단계\AccountHandler.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 9 source\oop 단계별 프로젝트 07단계\BankingCommonDecl.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 9 source\oop 단계별 프로젝트 07단계\HighCreditAccount.h" />
+    <ClInclude Include="cppcont\src\cpp_src\chapter 9 source\oop 단계별 프로젝트 07단계\NormalAccount.h" />
+    <ClInclude Include="cppcont\src\namesp2\twofunc.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
