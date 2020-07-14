@@ -1,73 +1,90 @@
 // string을 쓰는 일반 문제풀이용 템플릿
 #include <bits/stdc++.h>
-#define fi first
-#define se second
 using namespace std;
-typedef pair<int, int> pii;
-bool visitarr[1001][1001] = { false, };
+int n;
+vector<int> adj[100001];
+// p[i][j] : node i의 2^j번째 부모
+// 어떤 노드의 p[i][j]는 p[i][j-1] -> p[i][j-1];
+int p[100001][20] = { 0, };
+int d[100001]; // 깊이 저장
+
+int PMAX;
+
 int main() {
 	cin.tie(NULL);
 	ios_base::sync_with_stdio(false);
-	// bfs로 해봅시다.
-	// (0,0)에서 시작
-	int a, b;
-	cin >> a >> b;
-	int c, d;
-	cin >> c >> d;
-	queue<pii> bfsq;
-	visitarr[0][0] = true;
-	bfsq.push({ 0,0 });
-	int curtime = 1;
+	// lca
+	// p 사용 버전.
+
+	// 각 노드마다 깊이와 부모 노드는 유지해야 한다.
+	// adj 만들고 bfs or dfs로 위 정보 수집
+	cin >> n;
+	for (int i = 0; i < n - 1; i++) {
+		int a, b;
+		cin >> a >> b;
+		adj[a].push_back(b);
+		adj[b].push_back(a);
+	}
+	// bfs
+	// (노드 idx)
+	// root node의 깊이는 1
+	queue<int> bfsq;
+	bool visitarr[100001] = { false, };
+	bfsq.push(1);
+	visitarr[1] = true;
+	d[1] = 1;
 	while (!bfsq.empty()) {
-		int len = bfsq.size();
-		for (int i = 0; i < len; i++) {
-			pii curstate = bfsq.front();
-			bfsq.pop();
-			
-			if (curstate == make_pair(c, d)) {
-				cout << curtime << '\n';
-				return 0;
+		int curnode = bfsq.front();
+		bfsq.pop();
+		for (auto node : adj[curnode])
+			if (!visitarr[node]) {
+				bfsq.push(node);
+				visitarr[node] = true;
+				d[node] = d[curnode] + 1;
+				p[node][0] = curnode;
 			}
-			// 세 가지 선택지
-			// 두 병에 동시에 버리거나 채우는 것도 고려. 단, (0,0)은 고려x
-			if (!visitarr[0][curstate.second]) {
-				visitarr[0][curstate.second] = true;
-				bfsq.push({ 0,curstate.second });
-			}
-			if (!visitarr[curstate.first][0]) {
-				visitarr[curstate.first][0] = true;
-				bfsq.push({ curstate.first,0});
-			}
-			if (!visitarr[a][curstate.se]) {
-				visitarr[a][curstate.se] = true;
-				bfsq.push({ a,curstate.se });
-			}
-			if (!visitarr[curstate.first][b]) {
-				visitarr[curstate.first][b] = true;
-				bfsq.push({ curstate.first,b });
-			}
-			if (!visitarr[a][b]) {
-				visitarr[a][b] = true;
-				bfsq.push({ a,b });
-			}
-			int after_a, after_b;
-			// b->a
-			after_a = curstate.first + curstate.second > a ? a : curstate.first + curstate.second;
-			after_b = curstate.first + curstate.second > a ? curstate.first + curstate.second - a : 0;
-			if (!visitarr[after_a][after_b]) {
-				visitarr[after_a][after_b] = true;
-				bfsq.push({ after_a,after_b });
-			}
-			// a->b
-			after_b = curstate.first + curstate.second > b ? b : curstate.first + curstate.second;
-			after_a = curstate.first + curstate.second > b ? curstate.first + curstate.second - b : 0;
-			if (!visitarr[after_a][after_b]) {
-				visitarr[after_a][after_b] = true;
-				bfsq.push({ after_a,after_b });
+	}
+
+	int rep = 0;
+	while ((1 << rep) < n)
+		rep++;
+	PMAX = rep;
+
+	// p 완성
+	for (int j = 1; (1 << j) < n; j++)
+		for (int i = 1; i <= n; i++)
+			if (p[i][j - 1])
+				p[i][j] = p[p[i][j - 1]][j - 1];
+
+	int m;
+	cin >> m;
+	for (int i = 0; i < m; i++) {
+		int a, b;
+		cin >> a >> b;
+
+		if (d[a] < d[b])
+			swap(a, b);
+
+		// 깊이를 맞춰 준다.
+		if (d[a] != d[b])
+			for (int j = PMAX; j >= 0; j--)
+				if (d[a] - (1 << j) >= d[b])
+					a = p[a][j];
+
+		// 만약 a==b면 답을 찾음
+		if (a == b) {
+			cout << a << '\n';
+			continue;
+		}
+
+		for (int j = PMAX; j >= 0; j--) {
+			// p[a][j] = p[b][j]가 될때 중단시켜 버리면 이게 LCA인지는 모른다.
+			if (d[a] - (1 << j) > 0 && p[a][j] != p[b][j]) {
+				a = p[a][j];
+				b = p[b][j];
 			}
 		}
-		curtime++;
+		cout << p[a][0] << '\n';
 	}
-	cout << -1 << '\n';
 	return 0;
 }

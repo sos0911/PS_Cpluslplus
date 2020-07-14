@@ -1,51 +1,97 @@
 // string을 쓰는 일반 문제풀이용 템플릿
 #include <bits/stdc++.h>
 using namespace std;
-typedef pair<int, int> pii;
-typedef vector<vector<pii>> vvpi;
-typedef vector<pii> vpi;
-int n, m;
-vvpi adj;
-bool visitarr[10001] = { false, };
-struct comp {
-	bool operator()(pii a, pii b) {
-		return a.second > b.second;
+int n;
+vector<int> adj[100001];
+// p[i][j] : node i의 2^j번째 부모
+// 어떤 노드의 p[i][j]는 p[i][j-1] -> p[i][j-1];
+int p[100001][20] = { 0, };
+int d[100001]; // 깊이 저장
+
+int PMAX;
+
+int LCA(int a, int b) {
+	// a,b의 lca 리턴
+	if (d[a] < d[b])
+		swap(a, b);
+
+	// 깊이를 맞춰 준다.
+	if (d[a] != d[b])
+		for (int j = PMAX; j >= 0; j--)
+			if (d[a] - (1 << j) >= d[b])
+				a = p[a][j];
+
+	// 만약 a==b면 답을 찾음
+	if (a == b)
+		return a;
+
+	for (int j = PMAX; j >= 0; j--) {
+		// p[a][j] = p[b][j]가 될때 중단시켜 버리면 이게 LCA인지는 모른다.
+		if (d[a] - (1 << j) > 0 && p[a][j] != p[b][j]) {
+			a = p[a][j];
+			b = p[b][j];
+		}
 	}
-};
+	return p[a][0];
+}
+
 int main() {
 	cin.tie(NULL);
 	ios_base::sync_with_stdio(false);
-	// 프림 알고리즘
-	// 최소 스패닝 트리
-	cin >> n >> m;
-	// (노드 idx, 가중치) 저장
-	adj.assign(n + 1, vpi());
+	// lca
+	// p 사용 버전.
+
+	// 각 노드마다 깊이와 부모 노드는 유지해야 한다.
+	// adj 만들고 bfs or dfs로 위 정보 수집
+	cin >> n;
+	for (int i = 0; i < n - 1; i++) {
+		int a, b;
+		cin >> a >> b;
+		adj[a].push_back(b);
+		adj[b].push_back(a);
+	}
+	// bfs
+	// (노드 idx)
+	// root node의 깊이는 1
+	queue<int> bfsq;
+	bool visitarr[100001] = { false, };
+	bfsq.push(1);
+	visitarr[1] = true;
+	d[1] = 1;
+	while (!bfsq.empty()) {
+		int curnode = bfsq.front();
+		bfsq.pop();
+		for (auto node : adj[curnode])
+			if (!visitarr[node]) {
+				bfsq.push(node);
+				visitarr[node] = true;
+				d[node] = d[curnode] + 1;
+				p[node][0] = curnode;
+			}
+	}
+
+	int rep = 0;
+	while ((1 << rep) < n)
+		rep++;
+	PMAX = rep;
+
+	// p 완성
+	for (int j = 1; (1 << j) < n; j++)
+		for (int i = 1; i <= n; i++)
+			if (p[i][j - 1])
+				p[i][j] = p[p[i][j - 1]][j - 1];
+
+	int m;
+	cin >> m;
 	for (int i = 0; i < m; i++) {
 		int a, b, c;
 		cin >> a >> b >> c;
-		adj[a].push_back({ b,c });
-		adj[b].push_back({ a,c });
+
+		int lca = LCA(a, b);
+		if (LCA(lca, c) == lca && (LCA(a, c) == c || LCA(b, c) == c))
+			cout << 1 << '\n';
+		else
+			cout << 0 << '\n';
 	}
-	// 최소 스패닝 트리 만들기
-	// (상대노드 idx, 가중치)
-	// queue 안에는 스패닝 트리 노드 -> 스패닝 트리가 아닌 노드 사이 edge 저장
-	int ans = 0;
-	priority_queue<pii, vector<pii>, comp> priq;
-	priq.push({ 1,0 });
-	while (!priq.empty()) {
-		pii curnode = priq.top();
-		priq.pop();
-		// 이미 상대노드가 스패닝트리에 속해 있을 수도 있다.
-		// 이미 앞에서 가중치가 더 적은 경로를 찾아냈을 경우.
-		if (visitarr[curnode.first])
-			continue;
-		visitarr[curnode.first] = true;
-		ans += curnode.second;
-		for(int i=0;i<adj[curnode.first].size();i++)
-			if (!visitarr[adj[curnode.first][i].first]) {
-				priq.push(adj[curnode.first][i]);
-			}
-	}
-	cout << ans << '\n';
 	return 0;
 }
