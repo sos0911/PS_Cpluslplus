@@ -3,6 +3,8 @@
         "xtree": "cpp",
         "vector": "cpp",
         "algorithm": "cpp",
-        "cstdlib": "cpp"
+        "cstdlib": "cpp",
+        "ios": "cpp",
+        "xiosbase": "cpp"
     }
 }
