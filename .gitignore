@@ -8,6 +8,14 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# exclude regarding .exe files
+*.dll
+*.exe
+*.o
+*.so
+*.com
+*.class
+
 # User-specific files
 *.rsuser
 *.suo
