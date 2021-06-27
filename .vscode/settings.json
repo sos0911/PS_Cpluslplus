@@ -18,6 +18,7 @@
         "xhash": "cpp",
         "xstring": "cpp",
         "xutility": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "chrono": "cpp"
     }
 }
