@@ -14,7 +14,7 @@ int solve(int n){
     return ret;
 }
 int main(){
-    // 반복동적은 어려울듯..
+    // 반복동적도 가능할듯?
     int n;
     cin>>n;
     memset(dp, -1, sizeof(dp));
